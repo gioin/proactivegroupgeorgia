@@ -10,6 +10,160 @@
 
 html,
 body {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: sans-serif;
 }
 
+.container {
+  display: flex;
+  margin: auto;
+  max-width: 1400px;
+  padding: 0 20px;
+  width: 100%;
+}
+
+/* --------- HEADER --------- */
+
+header {
+  background-color: $mainblue;
+  max-width: 100%;
+  height: 170px;
+  align-items: center;
+  margin-bottom: auto;
+  display: flex;
+  justify-content: center;
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    .logo img {
+      width: 260px;
+    }
+    label,
+    input {
+      display: none;
+    }
+  }
+  nav {
+    margin-right: 0;
+    display: flex;
+    align-items: center;
+    .nav-links {
+      .nav-link {
+        display: inline-block;
+        list-style: none;
+        padding: 0 20px;
+        a {
+          color: #fff;
+          text-decoration: none;
+          text-transform: uppercase;
+        }
+        a:hover {
+          padding-bottom: 12px;
+          border-bottom: 2px solid #fff;
+        }
+      }
+    }
+    .resplogo {
+      display: none;
+    }
+    .responsive-social_media {
+display: none;
+    }
+  }
+  .social_media {
+    a.fb ~ a {
+      padding-left: 20px;
+    }
+  }
+}
+
+/* --------- RESPONSIVE --------- */
+
+/* --------- header --------- */
+
+@media all and (max-width: 1120px) {
+  header {
+    position: relative;
+    height: 128px;
+    .menu {
+      label {
+        display: block;
+        position: absolute;
+        top: 40px;
+        right: 20px;
+        z-index: 2;
+        rect {
+          fill: #fff;
+        }
+      }
+      #myburger:checked + nav {
+        left: 0;
+      }
+    }
+    nav {
+      position: absolute;
+      background: rgb(17, 22, 42);
+      width: 100%;
+      left: -9999px;
+      right: 0;
+      top: 0;
+      padding-top: 127px;
+      padding-bottom: 25px;
+      display: flex;
+      flex-direction: column;
+      .nav-links {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        .nav-link {
+          padding: 20px 0;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          a:hover {
+            padding-bottom: 0;
+            border-bottom: none;
+          }
+        }
+      }
+      .resplogo {
+        position: absolute;
+        display: block;
+        top: 20px;
+        left: 20px;
+        img {
+          width: 150px;
+        }
+      }
+      .responsive-social_media {
+        display: flex;
+        justify-content: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.329);
+        width: 100%;
+        margin-top: 20px;
+        a.fb ~ a {
+          padding-left: 20px;
+        }
+        a {
+          margin-top: 25px;
+        }
+      }
+    }
+    .social_media {
+      display: none;
+    }
+  }
+
+  header .menu .logo {
+    position: absolute;
+    display: block;
+    top: 20px;
+    left: 20px;
+  }
+  header .menu .logo img {
+    width: 150px;
+  }
+}

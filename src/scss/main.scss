@@ -1,5 +1,11 @@
 @import "normalize.css/normalize";
 @import "./variable.scss";
+@import "./about.scss";
+@import "./contact.scss";
+@import "./fontFace.scss";
+@import "./mixins.scss";
+@import "./partners.scss";
+@import "./projects.scss";
 
 /* --------- Global --------- */
 * {
@@ -27,7 +33,7 @@ body {
 }
 
 section {
-  margin-bottom: 110px;
+  margin-bottom: 140px;
 }
 
 .section__title {
@@ -39,6 +45,14 @@ section {
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
+  text-align: center;
+}
+
+.title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-transform: capitalize;
 }
 
 /* --------- HEADER --------- */
@@ -60,8 +74,13 @@ header {
     align-items: center;
     width: 100%;
     align-items: center;
-    .logo img {
-      width: 200px;
+    .logo {
+      width: 240px;
+      margin-top: 5px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
     }
     label,
     input {
@@ -90,6 +109,7 @@ header {
     }
     .resplogo {
       display: none;
+      margin-top: 5px;
     }
     .responsive-social_media {
       display: none;
@@ -235,219 +255,99 @@ header {
 }
 
 /* --------- QUOTES SECTION --------- */
-
-.quotes-carousel-container {
-  height: 690px;
-  margin: 0 auto;
-  overflow: hidden;
+.quotes_section {
   position: relative;
+  overflow: none;
   width: 100%;
-
-  background: #fff;
-  font-size: 1.5em;
-  line-height: 1.2;
-  min-height: 20em;
-  background-image: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 1) 10%,
-      rgba(255, 255, 255, 0.6) 50%,
-      rgba(255, 255, 255, 0.6) 60%,
-      rgb(255, 255, 255) 100%
-    ),
-    linear-gradient(157deg, #ffd17c 20%, #e77fe9 96%);
-  background-size: 100% 100%;
-  overflow-x: hidden;
-  .quotes_title {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 700;
-    font-size: 40px;
-    margin-bottom: 40px;
-    text-transform: uppercase;
+  .section__title {
+    padding-bottom: 20px;
   }
-}
+  .quote-container {
+    width: 100%;
+    height: 100%;
+    overflow: none;
+    overflow: hidden;
+    cursor: pointer;
+  }
 
-.quotes-carousel {
-  height: 22em;
-  position: relative;
-  width: 100%;
-}
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
 
-.quote {
-  cursor: pointer;
-  margin: 4em auto 4em;
-  opacity: 0;
-  list-style: none;
-  padding: 1em;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(calc(100% + 12em), -50%) scale(0.6);
-  transition: transform 1.5s cubic-bezier(0.7, -0.3, 0.2, 1.3),
-    opacity 0.5s 0.6s ease-out;
-  width: 16em;
-}
-
-.quote-image {
-  background-size: 100%;
-  border-radius: 50%;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5) inset;
-  height: 7em;
-  position: absolute;
-  top: -7em;
-  left: calc(50% - 3.5em);
-  width: 7em;
-}
-
-.quote.previous {
-  opacity: 0.5;
-  transform: translate(-150%, -50%) scale(0.8);
-}
-
-.quote.current {
-  cursor: default;
-  opacity: 1;
-  transform: translate(-50%, -50%);
-}
-
-.quote.next {
-  opacity: 0.5;
-  transform: translate(50%, -50%) scale(0.8);
-}
-
-.quote.left {
-  transform: translate(calc(-150% - 12em), -50%) scale(0.6);
-}
-
-/* styling pips */
-
-.quotes-carousel-pips {
-  bottom: 0;
-  text-align: center;
-  width: 100%;
-  margin-top: -40px;
-}
-
-.quotes-carousel-pips ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-}
-
-.pip {
-  background: #888;
-  border-radius: 50%;
-  border: 2px solid #555;
-  cursor: pointer;
-  display: inline-block;
-  height: 20px;
-  margin: 0 0.1em;
-  padding: 0;
-  transform: scale(0.5);
-  transition: all 0.8s cubic-bezier(0, 1, 0.3, 1);
-  width: 20px;
-}
-
-.pip.previous,
-.pip.next {
-  background: #ccc;
-  transform: scale(0.6);
-}
-
-.pip.current {
-  background: #fff;
-  cursor: default;
-  transform: scale(0.7);
-}
-
-.pip:not(.current):hover {
-  transform: scale(1);
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      figure {
+        padding-top: 20px;
+      }
+      .name {
+        margin: 15px 0;
+        color: $mainblue;
+        font-weight: 500;
+      }
+      .review {
+        width: 80%;
+        font-style: italic;
+        height: 240px;
+      }
+    }
+  }
+  .swiper-pagination {
+    top: 590px;
+    z-index: 1;
+  }
 }
 
 /* --------- ACORDION SECTION --------- */
 
-
-.rules_section {
-  padding-top: 100px;
-  width: 100%;
-
-  .accordion {
-    max-width: 100%;
-    border-radius: 5px;
-    overflow: hidden;
-    background-color: #0f71ba;
+.briefinfo_section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .section__title {
+    padding-top: 50px;
   }
-  
-  .accordion__label,
-  .accordion__content {
-    padding: 14px 40px;
-  }
-  
-  .accordion__label {
-    color: #fff;
-    font-size: 1.2rem;
-    font-weight: 500;
-    cursor: pointer;
-    text-transform: capitalize;
-    position: relative;
-    transition: background 0.1s;
-    height: 80px;
-    align-items: center;
+  .briefinfo {
     display: flex;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.527);
-  }
-  
-  .accordion__label:hover {
-    background-color: rgba(0, 0, 0, 0.123);
-  }
-  
-  .accordion__label::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 20px;
-    width: 12px;
-    height: 6px;
-    background-image: url('data:image/svg+xml;utf8,<svg width="100" height="50" xmlns="http://www.w3.org/2000/svg"><polygon points="0,0 100,0 50,50" style="fill:%23FFFFFF99;" /></svg>');
-    background-size: contain;
-    transition: transform 0.4s;
-  }
-  
-  .accordion__content {
-    background-color: #cbdceb;
-    line-height: 1.6rem;
-    font-size: 0.85em;
-    display: none;
-    .title {
-      font-size: 1.15rem;
-      font-weight: 500;
-      text-transform: capitalize;
-    }
-    p {
-      width: 90%;
-      margin: 10px 0;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 55px;
+    .box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      img {
+        width: 130px;
+      }
+      .number {
+        color: #f16726;
+        font-size: 60px;
+        font-weight: 700;
+        margin: 40px 0;
+      }
+      .name {
+        font-weight: bold;
+        font-size: 27px;
+        text-transform: uppercase;
+      }
     }
   }
-  
-  .accordion__input {
-    display: none;
-  }
-  
-  .accordion__input:checked ~ .accordion__content {
-    display: block;
-  }
-  .accordion__input:checked ~ .accordion__label::after {
-    transform: translateY(-50%) rotate(0.5turn);
-  }
-
-  
 }
-
-
 
 /* --------- MISSION SECTION --------- */
 .mission_section {
@@ -583,7 +483,7 @@ footer {
 @media all and (max-width: 1120px) {
   header {
     position: relative;
-    height: 128px;
+    height: 86px;
     position: sticky;
     right: 0;
     left: 0;
@@ -593,7 +493,7 @@ footer {
       label {
         display: block;
         position: absolute;
-        top: 40px;
+        top: 28px;
         right: 20px;
         z-index: 4;
         position: fixed;
@@ -638,7 +538,7 @@ footer {
       .resplogo {
         position: absolute;
         display: block;
-        top: 20px;
+        top: 0px;
         left: 20px;
         img {
           width: 150px;
@@ -666,17 +566,12 @@ footer {
   header .menu .logo {
     position: absolute;
     display: block;
-    top: 20px;
+    top: 0px;
     left: 20px;
   }
   header .menu .logo img {
     width: 150px;
   }
-
-  .swiper_section {
-    
-  }
-
 }
 
 /* --------- INFO SECTION --------- */
@@ -750,23 +645,52 @@ footer {
     font-size: 30px;
     line-height: 1.9rem;
   }
+
+  section {
+    margin-bottom: 100px;
+  }
+}
+
+/* --------- WHERE WE ARE --------- */
+@media all and (max-width: 870px) {
+  .briefinfo_section {
+    .section__title {
+      margin-bottom: 20px;
+    }
+    .briefinfo {
+      width: 100%;
+      flex-direction: column;
+      .box {
+        figure {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          img {
+            width: 90px;
+          }
+        }
+        .number {
+          font-size: 50px;
+          margin: 30px 0;
+        }
+        .name {
+          font-size: 20px;
+        }
+      }
+      .box:nth-child(2) {
+        margin: 50px 0;
+      }
+    }
+  }
 }
 
 /* --------- QUOTES SECTION --------- */
-@media all and (max-width: 631px) {
-  .quotes-carousel-container {
-    font-size: 1em;
-    
-.quote-image {
-  background-size: 100%;
-  border-radius: 50%;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5) inset;
-  position: absolute;
-  top: -5em;
-  left: calc(50% - 3.5em);
-  width: 4em;
-  height: 4em;
 
-}
+@media all and (max-width: 870px) {
+  .quotes_section {
+    .swiper-pagination {
+      margin-top: 15px;
+    }
   }
 }

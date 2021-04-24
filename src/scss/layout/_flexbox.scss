@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  margin: auto;
+  max-width: 1350px;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.container--column {
+  flex-direction: column;
+}
+
+.container--center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  margin-bottom: 14rem;
+  transition: transform 1s, opacity 1s;
+}
+
+.margin-b-0 {
+  margin-bottom: 0;
+}
+
+.section--hidden {
+  opacity: 0;
+  transform: translateY(8rem);
+}

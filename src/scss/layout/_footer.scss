@@ -1,0 +1,65 @@
+/* --------- Footer SECTION --------- */
+.footer {
+  padding: 7rem 0;
+  background-color: $mainblue;
+  color: $color-grey-light-1;
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.623);
+    padding-bottom: 1.6rem;
+    align-items: flex-end;
+    ul {
+      display: flex;
+      li {
+        list-style: none;
+        padding-left: 2.8rem;
+        a {
+          text-decoration: none;
+          font-size: 1.4rem;
+          line-height: 1.5rem;
+          letter-spacing: 0.05em;
+          text-transform: uppercase;
+          color: $color-grey-light-1;
+          transition: all 0.2s;
+        }
+        a:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+  &__bottom {
+    padding-top: 2.8rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__adress {
+    font-weight: normal;
+    font-size: $default-font-size;
+    line-height: 2rem;
+    color: $color-grey-light-1;
+  }
+  &__contact {
+    font-size: $default-font-size;
+    color: $mainblue;
+    font-weight: normal;
+    padding: 2.5rem 0;
+    color: $color-grey-light-1;
+  }
+  &__socialmedia {
+    display: flex;
+    p {
+      color: $color-grey-light-1;
+      font-size: $default-font-size;
+      text-transform: unset;
+      margin-right: 2rem;
+    }
+  }
+  &__inc {
+    color: #000000;
+    font-size: $default-font-size;
+    line-height: 2rem;
+    color: $color-grey-light-1;
+  }
+}

@@ -1,0 +1,18 @@
+.social-media {
+  a {
+    padding-right: 20px;
+    opacity: 0.82;
+    transition: all 0.3s;
+  }
+  a:hover {
+    opacity: 1;
+  }
+  a:last-child {
+    padding-right: 0px;
+  }
+}
+
+.social-media--absolute{
+  position: absolute;
+  right: 0;
+}

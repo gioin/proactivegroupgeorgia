@@ -1,0 +1,91 @@
+.contact_section {
+  margin-top: 5rem;
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .contact_section__boxs {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      .box {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        border: 1px solid rgba(126, 126, 126, 0);
+        width: 30rem;
+        text-align: center;
+        p {
+          font-weight: 600;
+          font-size: 1.5rem;
+          margin: 1.5rem 0;
+          text-transform: capitalize;
+        }
+        .circle {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          width: 10rem;
+          height: 10rem;
+          background: rgba(48, 147, 130, 0.08);
+          .phone {
+            background: url(/img/phone.svg);
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            background-position: center;
+            background-size: 4rem;
+          }
+          .mail {
+            background: url(/img/send.svg);
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            background-position: center;
+            background-size: 4rem;
+          }
+          .location {
+            background: url(/img/map_pin.svg);
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            background-position: center;
+            background-size: 4rem;
+          }
+        }
+      }
+    }
+  }
+
+  .subtitle {
+    width: 56%;
+    margin-bottom: 5rem;
+    display: flex;
+    justify-content: center;
+    font-size: 1.1rem;
+    text-align: center;
+  }
+}
+
+@media all and (max-width: 1000px) {
+  .contact_section {
+    .container {
+      .contact_section__boxs {
+        flex-direction: column;
+        align-items: center;
+        .box {
+          width: 100%;
+        }
+        .box:last-child {
+          padding-bottom: 0;
+        }
+      }
+    }
+    .subtitle {
+      width: 100%;
+    }
+  }
+}

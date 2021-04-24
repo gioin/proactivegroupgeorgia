@@ -25,7 +25,7 @@ const DEST_IMG = `${DEST}img/`;
 const DEST_FONT = `${DEST_CSS}font/`;
 const SRC = "./src/";
 const SRC_JS = `${SRC}js/`;
-const SRC_CSS = `${SRC}scss/main.scss`;
+const SRC_CSS = `${SRC}scss/**/*.scss`;
 const SRC_IMG = `${SRC}img/`;
 const SRC_FONT = `${SRC}scss/font/`;
 

@@ -1,0 +1,37 @@
+@import "./projects.scss";
+
+.about-section {
+  margin-top: 5rem;
+  .aboutus {
+    width: 100%;
+    .whatwedo {
+      display: flex;
+      width: 100%;
+      padding: 4rem 0;
+      figure {
+        flex: 2;
+      }
+      .text {
+        display: flex;
+        flex-direction: column;
+        flex: 2;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 1293px) {
+  .about-section {
+    .whatwedo {
+      flex-direction: column;
+      figure {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

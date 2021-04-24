@@ -1,0 +1,42 @@
+body {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+  /*font-size: 16px;*/
+  line-height: 1.5;
+  color: $color-grey-dark-3;
+}
+
+.heading-primary {
+  font-weight: bold;
+  font-size: 4rem;
+  margin-bottom: 7rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0.7px;
+  color: $color-grey-dark-3;
+}
+
+.heading-secondary {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  text-transform: capitalize;
+  color: $color-grey-dark-3;
+}
+
+.heading-tertiary {
+  color: $color-grey-dark;
+  font-size: $default-font-size;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.paragraph {
+  font-size: $default-font-size;
+
+  color: $color-grey-dark;
+}

@@ -28,6 +28,7 @@
     "stylelint-prettier": "^1.1.2"
   },
   "dependencies": {
+    "countup.js": "^2.0.7",
     "normalize.css": "^8.0.1"
   }
 }

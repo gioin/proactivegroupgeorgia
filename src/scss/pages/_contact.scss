@@ -1,5 +1,9 @@
-.contact_section {
+.contact-section {
   margin-top: 5rem;
+  .text-content {
+    margin-bottom: 4rem;
+    text-align: center;
+  }
   .container {
     display: flex;
     justify-content: center;
@@ -71,7 +75,7 @@
 }
 
 @media all and (max-width: 1000px) {
-  .contact_section {
+  .contact-section {
     .container {
       .contact_section__boxs {
         flex-direction: column;

@@ -1,4 +1,30 @@
 .mini-slide {
   background-color: rgb(179, 168, 168);
-  height: 440px;
+  height: 540px;
+}
+
+.mini-cover {
+  position: relative;
+  background-color: rgb(235, 235, 235);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  &__text {
+    color: black;
+    font-size: 5rem;
+    width: 30%;
+    animation-name: moveInLeft;
+    animation-duration: 0.9s;
+    animation-timing-function: ease-out;
+  }
+  &__image {
+    height: 440px;
+    position: absolute;
+    top: 100px;
+    right: 0px;
+    clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
+    animation-name: moveInRight;
+    animation-duration: 0.9s;
+    animation-timing-function: ease-out;
+  }
 }

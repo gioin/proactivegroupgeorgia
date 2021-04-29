@@ -1,20 +1,21 @@
 @import "./projects.scss";
 
 .about-section {
-  margin-top: 5rem;
+  margin-top: 4rem;
   .aboutus {
     width: 100%;
     .whatwedo {
-      display: flex;
-      width: 100%;
-      padding: 4rem 0;
+      margin-top: 4rem;
       figure {
-        flex: 2;
+        float: left;
+        width: 650px;
+        margin: 0 2rem 0 0;
       }
       .text {
-        display: flex;
         flex-direction: column;
-        flex: 2;
+      }
+      .aboutus-img {
+        width: 100%;
       }
     }
   }

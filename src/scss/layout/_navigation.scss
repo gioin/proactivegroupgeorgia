@@ -7,8 +7,8 @@
   &__background {
     display: none;
     @include respond(tab-port) {
-        display: block;
-      }
+      display: block;
+    }
   }
   &__button {
     background-color: $color-white;
@@ -32,6 +32,7 @@
       top: 3rem;
       right: 3rem;
     }
+    transition: top 0.5s;
   }
 
   &__background {
@@ -46,7 +47,7 @@
       $color-primary-dark
     );
     z-index: 1000;
-    transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+    transition: top 0.5s, transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
 
     @include respond(tab-port) {
       top: 4.5rem;
@@ -57,6 +58,7 @@
       top: 3.5rem;
       right: 3.5rem;
     }
+    //transition: all 0.5s;
   }
 
   &__nav {
@@ -179,4 +181,11 @@
     top: 0;
     transform: rotate(-135deg);
   }
+}
+
+.navigation__button--transform {
+  top: 9px;
+}
+.navigation__background--transform {
+  top: 9px;
 }

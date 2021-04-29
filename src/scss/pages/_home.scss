@@ -4,6 +4,7 @@
   display: flex;
   justify-content: center;
   height: 100vh;
+
   .swiper-button-next,
   .swiper-button-prev {
     z-index: 2;
@@ -13,37 +14,12 @@
     width: 100%;
     height: 100%;
     z-index: 2;
-
-    .swiper-slide {
-      .swiper-content {
-        .front_text {
-          max-width: 600px;
-          background: rgba(104, 104, 104, 0.85);
-          padding-bottom: 24px;
-          margin: 0 20px;
-          display: flex;
-          justify-content: center;
-          flex-direction: column;
-          align-items: center;
-          text-align: center;
-          color: rgba(255, 255, 255, 0.794);
-          p {
-            width: 80%;
-          }
-        }
-        button {
-          width: 17.7rem;
-          height: 51.13px;
-          background-color: $mainblue;
-          border: none;
-          border-radius: 0.7rem;
-          cursor: pointer;
-          margin-top: 4rem;
-          color: rgba(255, 255, 255, 0.794);
-        }
-      }
-    }
   }
+
+  // .front-textimg{
+  // //  transition: transform 0.9s, opacity 0.9s;
+
+  // }
 
   .swiper-slide {
     text-align: center;
@@ -65,11 +41,41 @@
     -webkit-align-items: center;
     align-items: center;
   }
-  #image1 {
-    background-image: url(/img/Slider.webp);
+  #cover1 {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(black, 0.4),
+        rgba(rgb(69, 77, 94), 0.4)
+      ),
+      url(/img/back1.webp);
     background-repeat: no-repeat;
     width: 100%;
     background-color: rgb(107, 102, 102);
+    background-size: cover;
+  }
+  #cover2 {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(black, 0.4),
+        rgba(rgb(69, 77, 94), 0.4)
+      ),
+      url(/img/back2.webp);
+    background-repeat: no-repeat;
+    width: 100%;
+    background-color: rgb(107, 102, 102);
+    background-size: cover;
+  }
+  #cover3 {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(black, 0.4),
+        rgba(rgb(69, 77, 94), 0.4)
+      ),
+      url(/img/back3.webp);
+    background-repeat: no-repeat;
+    width: 100%;
+    background-color: rgb(107, 102, 102);
+    background-size: cover;
   }
   .swiper-pagination {
     margin-bottom: 20px;
@@ -99,20 +105,24 @@
         flex-direction: column;
         align-items: center;
         background-color: rosybrown;
-        max-width: 400px;
-        height: 355px;
+        max-width: 412px;
+        height: 352px;
         border-radius: 76px;
         color: $color-grey-light-2;
         p {
           font-weight: bold;
           font-size: $default-font-size;
-          margin: 2rem 0;
+          margin: 1rem 0;
         }
         h2 {
           font-weight: normal;
           font-size: $default-font-size;
-          width: 80%;
+          width: 83%;
+          height: 175px;
         }
+      }
+      &__icon {
+        width: 75px;
       }
       &__box:nth-child(1) {
         background-color: #f16726;
@@ -225,7 +235,12 @@
 
 /* --------- MISSION SECTION --------- */
 .mission-section {
-  background: url(/img/mission.webp);
+  background: linear-gradient(
+      to right bottom,
+      rgba(black, 0.5),
+      rgba(rgb(69, 77, 94), 0.5)
+    ),
+    url(/img/mission_img.webp);
   height: 93.7rem;
   background-position: center;
   text-align: center;
@@ -241,30 +256,5 @@
     color: $color-grey-light-2;
     font-size: $default-font-size;
     width: 60%;
-  }
-}
-
-@property --num {
-  syntax: "<integer>";
-  initial-value: 100;
-  inherits: false;
-}
-
-.gio {
-  animation: counter 5s alternate ease-in-out;
-  counter-reset: num var(--num);
-  font: 800 40px system-ui;
-  padding: 2rem;
-}
-.gio::after {
-  content: counter(num);
-}
-
-@keyframes counter {
-  from {
-    --num: 0;
-  }
-  to {
-    --num: 100;
   }
 }

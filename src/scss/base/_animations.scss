@@ -1,0 +1,63 @@
+.section--hidden {
+  opacity: 0;
+  transform: translateY(8rem);
+}
+
+.textimg--hide {
+  display: none;
+}
+
+.move-in-left {
+  animation-name: moveInLeft;
+  animation-duration: 0.9s;
+  animation-timing-function: ease-out;
+}
+
+.move-in-bottom {
+  animation: moveInBottom 0.4s ease-out 0.7s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+
+  80% {
+    transform: translateX(1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+
+  80% {
+    transform: translateX(-1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}

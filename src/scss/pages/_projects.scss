@@ -1,5 +1,6 @@
 .allprojects-section {
   margin-top: 5rem;
+  margin-bottom: 10px;
   .projects {
     width: 100%;
     display: flex;
@@ -11,9 +12,6 @@
     }
     &__text {
       flex: 5;
-    }
-    &__img {
-      width: 33.3rem;
     }
   }
 }
@@ -36,7 +34,7 @@
   .accordion__label {
     display: flex;
     justify-content: center;
-    font-size: 1.1rem;
+    font-size: $default-font-size;
     font-weight: 600;
     text-transform: uppercase;
     transition: background 0.1s;
@@ -48,6 +46,7 @@
       li {
         list-style: circle;
         padding-top: 10px;
+        font-size: $default-font-size;
         a {
           text-decoration: none;
         }
@@ -57,52 +56,48 @@
 }
 
 @media all and (max-width: 870px) {
-  .allprojects-section {
-    .projects {
-      &__list {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        .accordion {
-          width: 100%;
-        }
-        .accordion__label {
-          background-color: #0f71ba;
-          color: #fff;
-          position: relative;
-          height: 80px;
-          align-items: center;
-        }
-        .accordion__label::after {
-          content: "";
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          right: 20px;
-          width: 12px;
-          height: 6px;
-          background-image: url('data:image/svg+xml;utf8,<svg width="100" height="50" xmlns="http://www.w3.org/2000/svg"><polygon points="0,0 100,0 50,50" style="fill:%23FFFFFF99;" /></svg>');
-          background-size: contain;
-          transition: transform 0.4s;
-        }
-        .accordion__label:hover {
-          background-color: rgba(0, 0, 0, 0.322);
-        }
+  .list {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    .accordion {
+      width: 100%;
+    }
+    .accordion__label {
+      background-color: #0f71ba;
+      color: #fff;
+      position: relative;
+      height: 80px;
+      align-items: center;
+    }
+    .accordion__label::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 20px;
+      width: 12px;
+      height: 6px;
+      background-image: url('data:image/svg+xml;utf8,<svg width="100" height="50" xmlns="http://www.w3.org/2000/svg"><polygon points="0,0 100,0 50,50" style="fill:%23FFFFFF99;" /></svg>');
+      background-size: contain;
+      transition: transform 0.4s;
+    }
+    .accordion__label:hover {
+      background-color: rgba(0, 0, 0, 0.322);
+    }
 
-        .accordion__content {
-          display: none;
-          p {
-            width: 100%;
-            margin: 10px 0;
-          }
-        }
-        .accordion__input:checked ~ .accordion__content {
-          display: block;
-        }
-        .accordion__input:checked ~ .accordion__label::after {
-          transform: translateY(-50%) rotate(0.5turn);
-        }
+    .accordion__content {
+      display: none;
+      p {
+        width: 100%;
+        margin: 10px 0;
       }
+    }
+    .accordion__input:checked ~ .accordion__content {
+      display: block;
+    }
+    .accordion__input:checked ~ .accordion__label::after {
+      transform: translateY(-50%) rotate(0.5turn);
     }
   }
 }

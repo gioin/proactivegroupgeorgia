@@ -3,7 +3,7 @@ body {
   font-weight: 400;
   /*font-size: 16px;*/
   line-height: 1.5;
-  color: $color-grey-dark-3;
+  color: $color-grey-dark;
 }
 
 .heading-primary {
@@ -17,19 +17,16 @@ body {
   text-transform: uppercase;
   text-align: center;
   padding: 0.7px;
-  color: $color-grey-dark-3;
 }
 
 .heading-secondary {
-  font-size: 2rem;
+  font-size: 2.3rem;
   font-weight: 600;
   margin-bottom: 2rem;
   text-transform: capitalize;
-  color: $color-grey-dark-3;
 }
 
 .heading-tertiary {
-  color: $color-grey-dark;
   font-size: $default-font-size;
   font-weight: 700;
   text-transform: uppercase;
@@ -37,6 +34,23 @@ body {
 
 .paragraph {
   font-size: $default-font-size;
+}
 
-  color: $color-grey-dark;
+.front_text {
+  max-width: 600px;
+  background: rgba(49, 84, 124, 0.808);
+  padding: 24px 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.794);
+  animation-name: moveInLeft;
+  animation-duration: 0.9s;
+  animation-timing-function: ease-out;
+  transition: transform 0.9s, opacity 0.9s;
+  p {
+    width: 80%;
+  }
 }

@@ -3,6 +3,8 @@
   padding: 7rem 0;
   background-color: $mainblue;
   color: $color-grey-light-1;
+  transition: transform 0.9s, opacity 0.9s;
+
   &__top {
     display: flex;
     justify-content: space-between;

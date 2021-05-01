@@ -1,30 +1,132 @@
 .mini-slide {
-  background-color: rgb(179, 168, 168);
-  height: 540px;
+  background-image: radial-gradient(#772a97, #ef339a);
+  height: 510px;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  @include respond(tab-land) {
+    height: 493px;
+  }
+
+  @include respond(tab-port) {
+    height: 393px;
+  }
 }
 
 .mini-cover {
   position: relative;
   background-color: rgb(235, 235, 235);
   width: 100%;
-  height: 100%;
+  height: 392px;
   display: flex;
+  @include respond(tab-land) {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(black, 0.4),
+        rgba(rgb(69, 77, 94), 0.4)
+      ),
+      url("/img/0007.webp");
+    background-size: cover;
+    color: #eee;
+    height: 392px;
+    background-position-x: 30%;
+    justify-content: center;
+  }
+  @include respond(tab-port) {
+    height: 292px;
+  }
+
   &__text {
     color: black;
     font-size: 5rem;
-    width: 30%;
+    display: flex;
+    margin: auto;
+    max-width: 1350px;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: start;
+    padding: 0 10px;
+    flex-direction: column;
     animation-name: moveInLeft;
     animation-duration: 0.9s;
     animation-timing-function: ease-out;
+    @include respond(tab-land) {
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      color: #eee;
+      animation-name: moveInRight;
+      animation-duration: 0.9s;
+      animation-timing-function: ease-out;
+    }
+
+    .paragraph {
+      width: 30%;
+      @include respond(tab-land) {
+        width: 60%;
+      }
+      @include respond(tab-port) {
+        width: 90%;
+      }
+    }
   }
+
   &__image {
-    height: 440px;
+    height: 392px;
     position: absolute;
-    top: 100px;
+    top: 0px;
     right: 0px;
     clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
     animation-name: moveInRight;
     animation-duration: 0.9s;
     animation-timing-function: ease-out;
+    overflow: hidden;
+    @include respond(tab-land) {
+      display: none;
+      animation-name: inherit;
+      animation-duration: inherit;
+      animation-timing-function: inherit;
+    }
+  }
+
+  @media only screen and (max-width: 1573px) {
+    &__image {
+      clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 25% 100%);
+    }
   }
 }
+
+@include respond(tab-land) {
+  #mini-cover-about {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(black, 0.4),
+        rgba(rgb(69, 77, 94), 0.4)
+      ),
+      url("/img/aboutus_cover.webp");
+    background-position-x: 55%;
+  }
+  #mini-cover-partners {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(black, 0.4),
+        rgba(rgb(69, 77, 94), 0.4)
+      ),
+      url("/img/partners_cover.webp");
+    background-position-x: 16%;
+  }
+  #mini-cover-contact {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(black, 0.4),
+        rgba(rgb(69, 77, 94), 0.4)
+      ),
+      url("/img/contact_cover.webp");
+    background-position-x: 51%;
+  }
+}
+
+.mini-slide-section {
+  overflow: hidden;
+}
+//

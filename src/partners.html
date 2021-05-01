@@ -24,7 +24,35 @@
           <div class="header__logo">
             <a href="index.html"><img src="/img/pgglogo.webp" alt="Main logo"/></a>
           </div>
-
+          <div class="navigation">
+            <input type="checkbox" class="navigation__checkbox" id="navi-toggle" />
+      
+            <label for="navi-toggle" class="navigation__button">
+              <span class="navigation__icon">&nbsp;</span>
+            </label>
+      
+            <div class="navigation__background">&nbsp;</div>
+    
+            <nav class="navigation__nav">
+              <ul class="navigation__list">
+                <li class="navigation__item">
+                  <a href="index.html" class="navigation__link"><span>01</span>home</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="about.html" class="navigation__link"><span>02</span>about us</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="projects.html" class="navigation__link"><span>04</span>projects</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="partners.html" class="navigation__link"><span>05</span>partners</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="contact.html" class="navigation__link"><span>06</span>contact</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
        <!--   <label for="myburger">
             <svg class="burger" viewBox="0 0 100 80" width="40" height="27">
               <rect width="100" height="18"></rect>
@@ -42,7 +70,7 @@
               <li class="nav-link first"><a href="index.html">home</a></li>
               <li class="nav-link"><a href="about.html">about us</a></li>
               <li class="nav-link"><a href="projects.html">projects</a></li>
-              <li class="nav-link"><a href="partners.html">parthners</a></li>
+              <li class="nav-link "><a id="partners" href="partners.html">parthners</a></li>
               <li class="nav-link"><a href="contact.html">contact</a></li>
             </ul>
 
@@ -113,8 +141,7 @@
     </header>
     <section id="section1" class="mini-slide-section margin-b-0 ">
       <div class="mini-slide">
-        <div class="mini-cover">
-          <div class="container">
+        <div id="mini-cover-partners" class="mini-cover">
           <div class="mini-cover__text">
             Partners
             <div class="paragraph">We can’t help but sync-up with the passion our partners have for their ideas. This makes us proud of our work.</div>
@@ -122,7 +149,6 @@
           <figure>
             <img class="mini-cover__image" src="./img/partners_cover.webp" alt="Cover Photo">
           </figure>
-        </div>
       </div>
       </div>
       </section>
@@ -136,24 +162,26 @@
    EU Neighbours East, Visegrad Fund, USAID/Georgia, European Solidarity Corps, GTU and different international organizations and governmental institutions. We look forward to enrich partnership experience by new cooperation opportunities with different national and international institutions, organizations, embassy’s and interested relevant stakeholders. 
 </div>
 <div class="partners">
-<div class="partners__box">
+<div class="partners__box reveal reveal-resp">
+  <div class="heading-tertiary none">Erasmus+</div>
   <figure>
     <img src="/img/erasmus.webp" alt="partner">
   </figure>
   <div class="introducion">
-    <div class="heading-tertiary">Erasmus+</div>
+    <div class="heading-tertiary block">Erasmus+</div>
     <div class="paragraph">
       Erasmus+ is the EU Programme in the fields of education, training, youth and sport for the period 2021-2027. Education, training, youth and sport are key areas that support citizens in their personal and professional development. 
       High quality, inclusive education and training, as well as informal and non-formal learning, ultimately equip young people and participants of all ages with the qualifications and skills needed for their meaningful participation in democratic society, intercultural understanding and successful transition in the labour market. Building on the success of the programme in the period 2014-2020, Erasmus+ strengthens its efforts to increase the opportunities offered to more participants and to a wider range of organisations, focusing on its qualitative impact and contributing to more inclusive and cohesive, greener and digitally fit societies. Since 2016, ProActive Group Georgia actively participating and hosting Erasmus+ program youth mobility projects in Georgia and across the Europe.
     </div>
   </div>
 </div>
-<div class="partners__box">
+<div class="partners__box reveal reveal-resp">
+  <div class="heading-tertiary none">USAID Georgia</div>
   <figure>
     <img src="/img/usaid.webp" alt="partner">
   </figure>
   <div class="introducion">
-    <div class="heading-tertiary">USAID Georgia</div>
+    <div class="heading-tertiary block">USAID Georgia</div>
     <div class="paragraph">
       On behalf of the American people, we promote and demonstrate democratic values abroad, and advance a free, peaceful, and prosperous world. 
       In support of America's foreign policy, the U.S. Agency for International Development leads the U.S. Government's international development and 
@@ -164,12 +192,13 @@
     </div>
   </div>
 </div>
-<div class="partners__box">
+<div class="partners__box reveal reveal-resp">
+  <div class="heading-tertiary none">Visegrad Fund</div>
   <figure>
     <img src="/img/visegrad_fund.webp" alt="partner">
   </figure>
   <div class="introducion">
-    <div class="heading-tertiary">Visegrad Fund</div>
+    <div class="heading-tertiary block">Visegrad Fund</div>
     <div class="paragraph">
       The International Visegrad Fund is an international donor organization established in 2000 and funded by the governments of the Czech Rep., 
       Hungary, Poland and Slovakia. The fund promotes regional cooperation in the Visegrad region (V4) as well as between the V4 region and other countries, especially in the Western Balkans and Eastern Partnership regions through several grant and mobility programs. ProActive Group Georgia is proud to have an opportunity to be part of “Capacity Building of Youth Workers Working on Integration and Inclusion of Vulnerable Youth” supported by 
@@ -177,12 +206,13 @@
     </div>
   </div>
 </div>
-<div class="partners__box">
+<div class="partners__box reveal reveal-resp">
+  <div class="heading-tertiary none">EU Neighbours East</div>
   <figure>
     <img src="/img/logo_east.webp" alt="partner">
   </figure>
   <div class="introducion">
-    <div class="heading-tertiary">EU Neighbours East</div>
+    <div class="heading-tertiary block">EU Neighbours East</div>
     <div class="paragraph">
       The Regional Communication Programme seeks to raise awareness, increase knowledge and understanding of the European Neighbourhood Policy (ENP). 
       The objective of the European Neighbourhood Policy is to support reforms and democratic consolidation, and promote prosperity, stability and security 
@@ -192,12 +222,13 @@
     </div>
   </div>
 </div>
-<div class="partners__box">
+<div class="partners__box reveal reveal-resp">
+  <div class="heading-tertiary none">European Solidarity Corps</div>
   <figure>
     <img src="/img/en_european_solidarity_corps.webp" alt="partner">
   </figure>
   <div class="introducion">
-    <div class="heading-tertiary">European Solidarity Corps</div>
+    <div class="heading-tertiary block">European Solidarity Corps</div>
     <div class="paragraph">
       The European Solidarity Corps (former European Voluntary Service - EVS) is a funding program of the European Union that creates opportunities for 
       young people to volunteer, work, train and run their own solidarity projects that benefit communities around Europe. ESC projects offer an inspiring 
@@ -210,9 +241,9 @@
 </div>
 </section>
 
-<section class="s sponsors-section">
+<section class="sponsors-section reveal reveal-resp">
   <!-- Swiper -->
-  <p class="heading-primary">Partners and sponsors</p>
+  <p class="heading-primary">Partners & donors & supporters</p>
   <div class="container">
   <div class="quote-container">
     <div class="swiper-wrapper">

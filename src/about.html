@@ -87,7 +87,9 @@
 
             <ul class="nav-links">
               <li class="nav-link first"><a href="index.html">home</a></li>
-              <li class="nav-link"><a href="about.html">about us</a></li>
+              <li class="nav-link">
+                <a id="about" href="about.html">about us</a>
+              </li>
               <li class="nav-link"><a href="projects.html">projects</a></li>
               <li class="nav-link"><a href="partners.html">parthners</a></li>
               <li class="nav-link"><a href="contact.html">contact</a></li>
@@ -160,23 +162,21 @@
     </header>
     <section id="section1" class="mini-slide-section margin-b-0">
       <div class="mini-slide">
-        <div class="mini-cover">
-          <div class="container">
-            <div class="mini-cover__text">
-              About Us
-              <div class="paragraph">
-                We can’t help but sync-up with the passion our partners have for
-                their ideas. This makes us proud of our work.
-              </div>
+        <div id="mini-cover-about" class="mini-cover">
+          <div class="mini-cover__text">
+            About Us
+            <div class="paragraph">
+              We can’t help but sync-up with the passion our partners have for
+              their ideas. This makes us proud of our work.
             </div>
-            <figure>
-              <img
-                class="mini-cover__image"
-                src="./img/aboutus_cover.webp"
-                alt="Cover Photo"
-              />
-            </figure>
           </div>
+          <figure>
+            <img
+              class="mini-cover__image"
+              src="./img/aboutus_cover.webp"
+              alt="Cover Photo"
+            />
+          </figure>
         </div>
       </div>
     </section>
@@ -219,13 +219,12 @@
             teachers’ conferences, in active cooperation with Zugdidi
             Innovations & Tech park and Senaki municipality schools.
           </p>
-          <div class="whatwedo">
+          <div class="whatwedo reveal reveal-resp">
             <div class="text">
+              <div class="heading-secondary">what we do</div>
               <figure>
                 <img class="aboutus-img" src="/img/aboutus_img.webp" alt="" />
               </figure>
-              <div class="heading-secondary">what we do</div>
-
               <p class="paragraph">
                 If you have an idea, but not much opportunity and resources
                 around you, don’t worry. Since 2012, we always wanted to create
@@ -266,7 +265,7 @@
       </div>
     </section>
 
-    <footer class="footer">
+    <footer class="footer reveal reveal-resp">
       <!-- Footer SECTION -->
       <div class="container container--column">
         <div class="footer__top">

@@ -8,7 +8,7 @@ body {
 
 .heading-primary {
   font-weight: bold;
-  font-size: 4rem;
+  font-size: 3.4rem;
   margin-bottom: 7rem;
   width: 100%;
   display: flex;
@@ -17,6 +17,7 @@ body {
   text-transform: uppercase;
   text-align: center;
   padding: 0.7px;
+  transition: transform 0.9s, opacity 0.9s;
 }
 
 .heading-secondary {
@@ -24,12 +25,14 @@ body {
   font-weight: 600;
   margin-bottom: 2rem;
   text-transform: capitalize;
+  transition: transform 0.9s, opacity 0.9s;
 }
 
 .heading-tertiary {
   font-size: $default-font-size;
   font-weight: 700;
   text-transform: uppercase;
+  transition: transform 0.9s, opacity 0.9s;
 }
 
 .paragraph {
@@ -39,7 +42,9 @@ body {
 .front_text {
   max-width: 600px;
   background: rgba(49, 84, 124, 0.808);
-  padding: 24px 10px;
+  padding: 20px 0px;
+  margin: 0 20px;
+  margin-top: 20px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -51,6 +56,19 @@ body {
   animation-timing-function: ease-out;
   transition: transform 0.9s, opacity 0.9s;
   p {
-    width: 80%;
+    width: 90%;
+  }
+}
+
+.web-text {
+  @include respond(phone) {
+    display: none;
+  }
+}
+
+.mobile-text {
+  display: none;
+  @include respond(phone) {
+    display: block;
   }
 }

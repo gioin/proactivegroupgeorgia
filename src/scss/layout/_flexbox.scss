@@ -17,10 +17,18 @@
 }
 
 section {
-  margin-bottom: 14rem;
+  margin-bottom: 13rem;
   transition: transform 0.9s, opacity 0.9s;
 }
 
 .margin-b-0 {
   margin-bottom: 0;
+}
+
+.none {
+  display: none;
+}
+
+.block {
+  display: block;
 }

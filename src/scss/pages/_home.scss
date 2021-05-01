@@ -3,12 +3,15 @@
 .swiper-section {
   display: flex;
   justify-content: center;
-  height: 100vh;
-
+  height: 100vh; /* Use vh as a fallback for browsers that do not support Custom Properties */
   .swiper-button-next,
   .swiper-button-prev {
     z-index: 2;
     top: 45%;
+    color: $color-grey-light-2;
+    @include respond(phone) {
+      display: none;
+    }
   }
   .swiper-container {
     width: 100%;
@@ -23,7 +26,7 @@
 
   .swiper-slide {
     text-align: center;
-    font-size: 18px;
+    font-size: 1.8rem;
     background: #fff;
     width: 100%;
 
@@ -77,6 +80,7 @@
     background-color: rgb(107, 102, 102);
     background-size: cover;
   }
+
   .swiper-pagination {
     margin-bottom: 20px;
   }
@@ -86,7 +90,7 @@
     background-color: rgb(223, 223, 223);
   }
   .swiper-pagination-bullet-active {
-    background-color: $mainblue;
+    background-color: $color-grey-light-2;
   }
 }
 
@@ -109,6 +113,7 @@
         height: 352px;
         border-radius: 76px;
         color: $color-grey-light-2;
+        transition: transform 0.9s, opacity 0.9s;
         p {
           font-weight: bold;
           font-size: $default-font-size;
@@ -197,6 +202,13 @@
   .swiper-pagination {
     top: 300px;
     z-index: 1;
+    @include respond(phone) {
+      top: 319px;
+    }
+
+    @media only screen and (max-width: 350px) {
+      top: 369px;
+    }
   }
 }
 
@@ -210,12 +222,12 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding-top: 5.5rem;
   &__box {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    transition: transform 0.9s, opacity 0.9s;
     img {
       width: 13rem;
     }
@@ -245,6 +257,9 @@
   background-position: center;
   text-align: center;
   display: flex;
+  @include respond(phone) {
+    height: 75rem;
+  }
   .title {
     font-size: 4rem;
     color: $color-grey-light-2;
@@ -256,5 +271,14 @@
     color: $color-grey-light-2;
     font-size: $default-font-size;
     width: 60%;
+    @include respond(phone) {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 479px) {
+  .swiper-section {
+    height: calc(var(--vh, 1vh) * 100);
   }
 }

@@ -23,7 +23,35 @@
           <div class="header__logo">
             <a href="index.html"><img src="/img/pgglogo.webp" alt="Main logo"/></a>
           </div>
-
+          <div class="navigation">
+            <input type="checkbox" class="navigation__checkbox" id="navi-toggle" />
+      
+            <label for="navi-toggle" class="navigation__button">
+              <span class="navigation__icon">&nbsp;</span>
+            </label>
+      
+            <div class="navigation__background">&nbsp;</div>
+    
+            <nav class="navigation__nav">
+              <ul class="navigation__list">
+                <li class="navigation__item">
+                  <a href="index.html" class="navigation__link"><span>01</span>home</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="about.html" class="navigation__link"><span>02</span>about us</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="projects.html" class="navigation__link"><span>04</span>projects</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="partners.html" class="navigation__link"><span>05</span>partners</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="contact.html" class="navigation__link"><span>06</span>contact</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
       <!--   <label for="myburger">
             <svg class="burger" viewBox="0 0 100 80" width="40" height="27">
               <rect width="100" height="18"></rect>
@@ -40,7 +68,7 @@
             <ul class="nav-links">
               <li class="nav-link first"><a href="index.html">home</a></li>
               <li class="nav-link"><a href="about.html">about us</a></li>
-              <li class="nav-link"><a href="projects.html">projects</a></li>
+              <li class="nav-link"><a id="projects" href="projects.html">projects</a></li>
               <li class="nav-link"><a href="partners.html">parthners</a></li>
               <li class="nav-link"><a href="contact.html">contact</a></li>
             </ul>
@@ -113,16 +141,14 @@
     <section id="section1" class="mini-slide-section margin-b-0 ">
       <div class="mini-slide">
         <div class="mini-cover">
-          <div class="container">
           <div class="mini-cover__text">
             Projects
             <div class="paragraph">We can’t help but sync-up with the passion our partners have for their ideas. This makes us proud of our work.</div>
           </div>
           <figure>
-            <img class="mini-cover__image" src="./img/0009.webp" alt="Cover Photo">
+            <img class="mini-cover__image" src="./img/0007.webp" alt="Cover Photo">
           </figure>
         </div>
-      </div>
       </div>
       </section>
     <section class="allprojects-section section--hidden rmw">
@@ -144,7 +170,7 @@ Organization HQ is located in Tbilisi and also have 2 regional branches in Zugdi
     </div>
     </section>
 
-    <section class="s list-section">
+    <section class="list-section reveal reveal-resp">
       <div class="container">
     <div class="list">
       <div class="accordion">

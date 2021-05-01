@@ -6,7 +6,7 @@
   label,
   &__background {
     display: none;
-    @include respond(tab-port) {
+    @include respond(tab-land) {
       display: block;
     }
   }
@@ -15,24 +15,15 @@
     height: 7rem;
     width: 7rem;
     position: fixed;
-    top: 6rem;
-    right: 6rem;
+    top: 2rem;
+    right: 1rem;
     border-radius: 50%;
     z-index: 2000;
     box-shadow: 0 1rem 3rem rgba($color-black, 0.1);
     text-align: center;
     cursor: pointer;
-
-    @include respond(tab-port) {
-      top: 4rem;
-      right: 4rem;
-    }
-
-    @include respond(phone) {
-      top: 3rem;
-      right: 3rem;
-    }
-    transition: top 0.5s;
+    transition: all 0.5s;
+    transform: scale(0.7);
   }
 
   &__background {
@@ -40,36 +31,24 @@
     width: 6rem;
     border-radius: 50%;
     position: fixed;
-    top: 6.5rem;
-    right: 6.5rem;
-    background-image: radial-gradient(
-      $color-primary-light,
-      $color-primary-dark
-    );
+    top: 2.5rem;
+    right: 1.5em;
+    background-image: radial-gradient(#772a97, #ef339a);
     z-index: 1000;
     transition: top 0.5s, transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
-
-    @include respond(tab-port) {
-      top: 4.5rem;
-      right: 4.5rem;
-    }
-
-    @include respond(phone) {
-      top: 3.5rem;
-      right: 3.5rem;
-    }
-    //transition: all 0.5s;
+    transform: scale(0.7);
   }
 
   &__nav {
     height: 100vh;
     position: fixed;
     top: 0;
-    left: 0;
+    left: -400px;
     z-index: 1500;
 
+    pointer-events: none;
     opacity: 0;
-    width: 0;
+    width: 100%;
     transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 
@@ -91,9 +70,9 @@
     &:link,
     &:visited {
       display: inline-block;
-      font-size: 3rem;
       font-weight: 300;
-      padding: 1rem 2rem;
+      font-size: 3rem;
+      padding: 0.8rem 2rem;
       color: $color-white;
       text-decoration: none;
       text-transform: uppercase;
@@ -115,7 +94,7 @@
     &:hover,
     &:active {
       background-position: 100%;
-      color: $color-primary;
+      color: $color-grey-dark-3;
       transform: translateX(1rem);
     }
   }
@@ -127,7 +106,8 @@
 
   &__checkbox:checked ~ &__nav {
     opacity: 1;
-    width: 100%;
+    pointer-events: auto;
+    left: 0px;
   }
 
   //ICON
@@ -184,8 +164,10 @@
 }
 
 .navigation__button--transform {
-  top: 9px;
+  top: 4px;
+  transform: scale(0.65);
 }
 .navigation__background--transform {
-  top: 9px;
+  top: 2px;
+  transform: scale(0.65);
 }

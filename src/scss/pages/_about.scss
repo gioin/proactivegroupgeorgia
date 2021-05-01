@@ -6,10 +6,22 @@
     width: 100%;
     .whatwedo {
       margin-top: 4rem;
+      transition: transform 0.9s, opacity 0.9s;
+      @include respond(tab-land) {
+        margin-top: 2rem;
+      }
       figure {
         float: left;
         width: 650px;
-        margin: 0 2rem 0 0;
+        margin: 1rem 2rem 0 0;
+        transition: transform 0.9s, opacity 0.9s;
+
+        @include respond(tab-land) {
+          float: none;
+          width: 100%;
+          margin-bottom: 2rem;
+          margin-top: 0rem;
+        }
       }
       .text {
         flex-direction: column;

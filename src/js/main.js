@@ -1,10 +1,82 @@
+// First we get the viewport height and multiply it by 1% to get a value for a vh unit
+let vh = window.innerHeight * 0.01;
+// Then we set the value in the --vh custom property to the root of the document
+document.documentElement.style.setProperty("--vh", `${vh}px`);
+
+// We listen to the resize event
+window.addEventListener("resize", () => {
+  // We execute the same script as before
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty("--vh", `${vh}px`);
+});
+
+///// Media Query
+const reveal = document.querySelectorAll(".reveal");
+const revealResp = document.querySelectorAll(".reveal-resp");
+
+const smallDevice = window.matchMedia("(max-width: 870px)");
+
+smallDevice.addListener(handleDeviceChange);
+
+function handleDeviceChange(e) {
+  if (e.matches) {
+    /// responsive Reveal
+    const revealSection2 = function (entries, observer) {
+      const [entry] = entries;
+      console.log(entries);
+      if (!entry.isIntersecting) return;
+
+      entry.target.classList.remove("section--hidden");
+      observer.unobserve(entry.target);
+    };
+
+    const sectionObserver2 = new IntersectionObserver(revealSection2, {
+      root: null,
+      threshold: [0.1],
+    });
+
+    revealResp.forEach(function (section) {
+      sectionObserver2.observe(section);
+      section.classList.add("section--hidden");
+    });
+  } else {
+    //////////////////////////////////////
+    /// sections Reveal
+
+    const revealSection = function (entries, observer) {
+      const [entry] = entries;
+      console.log(entries);
+      if (!entry.isIntersecting) return;
+
+      entry.target.classList.remove("section--hidden");
+      observer.unobserve(entry.target);
+    };
+
+    const sectionObserver = new IntersectionObserver(revealSection, {
+      root: null,
+      threshold: [0.15],
+    });
+
+    reveal.forEach(function (section) {
+      sectionObserver.observe(section);
+      section.classList.add("section--hidden");
+    });
+  }
+}
+
+// Run it initially
+handleDeviceChange(smallDevice);
+/////////
+
+
+
 var mySwiper = new Swiper(".swiper-container", {
   //sweper speed
-  speed: 1000,
+  speed: 900,
   //display timer
   autoplay: {
     delay: 2500,
-    disableOnInteraction: false,
+    disableOnInteraction: true,
     //reverseDirection: true,
     waitForTransition: true,
   },
@@ -31,7 +103,7 @@ var mySwiper = new Swiper(".swiper-container", {
       if (element.classList !== "textimg--hide" && e.previousIndex != 1) {
         setTimeout(function () {
           element2.classList.add("textimg--hide");
-        }, 6000);
+        }, 1000);
       }
 
       console.log(e);
@@ -78,24 +150,24 @@ var swiper = new Swiper(".quote-container", {
     el: ".swiper-pagination",
     clickable: true,
   },
-  // breakpoints: {
-  //   0: {
-  //     slidesPerView: 1,
-  //     spaceBetween: 20,
-  //   },
-  //   768: {
-  //     slidesPerView: 2,
-  //     spaceBetween: 40,
-  //   },
-  //   1024: {
-  //     slidesPerView: 3,
-  //     spaceBetween: 50,
-  //   },
-  //   1894: {
-  //     slidesPerView: 4,
-  //     spaceBetween: 50,
-  //   },
-  // },
+  breakpoints: {
+    0: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 5,
+      spaceBetween: 40,
+    },
+    1024: {
+      slidesPerView: 8,
+      spaceBetween: 50,
+    },
+    1894: {
+      slidesPerView: 9,
+      spaceBetween: 50,
+    },
+  },
 });
 
 ///////////////////////////////////////
@@ -132,29 +204,6 @@ const obsOption = {
 const observer = new IntersectionObserver(obsCalback, obsOption);
 
 observer.observe(section1);
-
-//////////////////////////////////////
-/// sections Reveal
-const allSections = document.querySelectorAll(".s");
-
-const revealSection = function (entries, observer) {
-  const [entry] = entries;
-  console.log(entries);
-  if (!entry.isIntersecting) return;
-
-  entry.target.classList.remove("section--hidden");
-  observer.unobserve(entry.target);
-};
-
-const sectionObserver = new IntersectionObserver(revealSection, {
-  root: null,
-  threshold: [0.15],
-});
-
-allSections.forEach(function (section) {
-  sectionObserver.observe(section);
-  section.classList.add("section--hidden");
-});
 
 //////////////////////////////////////
 /// sections Reveal

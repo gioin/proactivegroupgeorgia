@@ -4,19 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="Description" content="New landing page" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap"
-      rel="stylesheet"
-    />
+
     <title>Document</title>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
+
     <!-- Style -->
     <link rel="stylesheet" href="/css/main.min.css" />
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+  
+    <script defer src="/js/swiper-bundle.min.js"></script>
     <script defer src="/js/main.min.js"></script>
   </head>
   <body>
@@ -27,6 +22,48 @@
             <a href="index.html"
               ><img src="/img/pgglogo.webp" alt="Main logo"
             /></a>
+          </div>
+
+          <div class="navigation">
+            <input
+              type="checkbox"
+              class="navigation__checkbox"
+              id="navi-toggle"
+            />
+
+            <label for="navi-toggle" class="navigation__button">
+              <span class="navigation__icon">&nbsp;</span>
+            </label>
+
+            <div class="navigation__background">&nbsp;</div>
+
+            <nav class="navigation__nav">
+              <ul class="navigation__list">
+                <li class="navigation__item">
+                  <a href="#" class="navigation__link"><span>01</span>home</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="about.html" class="navigation__link"
+                    ><span>02</span>about us</a
+                  >
+                </li>
+                <li class="navigation__item">
+                  <a href="projects.html" class="navigation__link"
+                    ><span>04</span>projects</a
+                  >
+                </li>
+                <li class="navigation__item">
+                  <a href="partners.html" class="navigation__link"
+                    ><span>05</span>partners</a
+                  >
+                </li>
+                <li class="navigation__item">
+                  <a href="contact.html" class="navigation__link"
+                    ><span>06</span>contact</a
+                  >
+                </li>
+              </ul>
+            </nav>
           </div>
 
           <!--     <label for="myburger">
@@ -54,67 +91,36 @@
               </li>
             </ul>
 
-            <div class="resp-social-media">
-              <a
-                class="fb"
-                rel="noopener"
-                target=" _blank"
-                href="https://www.facebook.com/"
-                ><img src="./img/facebook_white.svg" alt="Facebook logo"
-              /></a>
-              <a
-                class="instagram"
-                rel="noopener"
-                target=" _blank"
-                href="https://www.instagram.com/"
-                ><img src="./img/instagram_white.svg" alt="Instagram logo"
-              /></a>
-              <a
-                class="twitter"
-                rel="noopener"
-                target=" _blank"
-                href="https://twitter.com/"
-                ><img src="./img/twitter_white.svg" alt="Twiter logo"
-              /></a>
-              <a
-                class="youtube"
-                rel="noopener"
-                target=" _blank"
-                href="https://youtube.com/"
-                ><img src="./img/youtube_white.svg" alt="Twiter logo"
-              /></a>
-            </div>
-          </nav>
 
           <div class="social-media social-media--absolute">
             <a
-              class="fb"
-              rel="noopener"
-              target=" _blank"
-              href="https://www.facebook.com/"
-              ><img src="./img/facebook_white.svg" alt="Facebook logo"
-            /></a>
-            <a
-              class="instagram"
-              rel="noopener"
-              target=" _blank"
-              href="https://www.instagram.com/"
-              ><img src="./img/instagram_white.svg" alt="Instagram logo"
-            /></a>
-            <a
-              class="twitter"
-              rel="noopener"
-              target=" _blank"
-              href="https://twitter.com/"
-              ><img src="./img/twitter_white.svg" alt="Twiter logo"
-            /></a>
-            <a
-              class="youtube"
-              rel="noopener"
-              target=" _blank"
-              href="https://youtube.com/"
-              ><img src="./img/youtube_white.svg" alt="Twiter logo"
-            /></a>
+            class="fb"
+            rel="noopener"
+            target=" _blank"
+            href="https://www.facebook.com/proactivegroupgeorgia"
+            ><img src="./img/facebook_white.svg" alt="Facebook logo"
+          /></a>
+          <a
+            class="instagram"
+            rel="noopener"
+            target=" _blank"
+            href="https://www.instagram.com/proactivegroupgeorgia/"
+            ><img src="./img/instagram_white.svg" alt="Instagram logo"
+          /></a>
+          <a
+            class="twitter"
+            rel="noopener"
+            target=" _blank"
+            href="https://twitter.com/proactivegeo"
+            ><img src="./img/twitter_white.svg" alt="Twiter logo"
+          /></a>
+          <a
+            class="youtube"
+            rel="noopener"
+            target=" _blank"
+            href="https://www.youtube.com/channel/UCfyJDX_7Jo9Q86KDRnrhKyQ"
+            ><img src="./img/youtube_white.svg" alt="Twiter logo"
+          /></a>
           </div>
         </div>
       </div>
@@ -197,53 +203,49 @@
         </div>
         <div class="footer__bottom">
           <div class="footer__touchinfo">
-            <div class="footer__adress">
-              Numm Inc. 2569 Land Park Dr, Sacramento, CA 95818
+            <div class="footer__adress rmw">
+              68, Merab Kostava St, Tbilisi
             </div>
             <div class="footer__contact">
-              office@nummfinance.com +1-916-555-0184
+              proactivegroupgeorgia@gmail.com +1-916-555-0184
             </div>
-            <div class="footer__inc">© 2010 — 2020 Numm Inc.</div>
+            <div class="footer__inc">© 2021</div>
           </div>
           <div class="footer__socialmedia">
             <p>follow us on:</p>
             <div class="social-media">
               <a
-                class="fb"
-                rel="noopener"
-                target=" _blank"
-                href="https://www.facebook.com/"
-                ><img src="./img/facebook_white.svg" alt="Facebook logo"
-              /></a>
-              <a
-                class="instagram"
-                rel="noopener"
-                target=" _blank"
-                href="https://www.instagram.com/"
-                ><img src="./img/instagram_white.svg" alt="Instagram logo"
-              /></a>
-              <a
-                class="twitter"
-                rel="noopener"
-                target=" _blank"
-                href="https://twitter.com/"
-                ><img src="./img/twitter_white.svg" alt="Twiter logo"
-              /></a>
-              <a
-                class="youtube"
-                rel="noopener"
-                target=" _blank"
-                href="https://youtube.com/"
-                ><img src="./img/youtube_white.svg" alt="Twiter logo"
-              /></a>
+              class="fb"
+              rel="noopener"
+              target=" _blank"
+              href="https://www.facebook.com/proactivegroupgeorgia"
+              ><img src="./img/facebook_white.svg" alt="Facebook logo"
+            /></a>
+            <a
+              class="instagram"
+              rel="noopener"
+              target=" _blank"
+              href="https://www.instagram.com/proactivegroupgeorgia/"
+              ><img src="./img/instagram_white.svg" alt="Instagram logo"
+            /></a>
+            <a
+              class="twitter"
+              rel="noopener"
+              target=" _blank"
+              href="https://twitter.com/proactivegeo"
+              ><img src="./img/twitter_white.svg" alt="Twiter logo"
+            /></a>
+            <a
+              class="youtube"
+              rel="noopener"
+              target=" _blank"
+              href="https://www.youtube.com/channel/UCfyJDX_7Jo9Q86KDRnrhKyQ"
+              ><img src="./img/youtube_white.svg" alt="Twiter logo"
+            /></a>
             </div>
           </div>
         </div>
       </div>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <!-- <script src="/js/main.min.js" type="text/javascript"></script>-->
   </body>
 </html>

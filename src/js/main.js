@@ -68,8 +68,6 @@ function handleDeviceChange(e) {
 handleDeviceChange(smallDevice);
 /////////
 
-
-
 var mySwiper = new Swiper(".swiper-container", {
   //sweper speed
   speed: 900,
@@ -141,7 +139,7 @@ var swiper = new Swiper(".quote-container", {
   speed: 750,
   //display timer
   autoplay: {
-    delay: 3000,
+    delay: 1000,
     disableOnInteraction: false,
   },
   slidesPerView: 10,
@@ -152,6 +150,10 @@ var swiper = new Swiper(".quote-container", {
   },
   breakpoints: {
     0: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    400: {
       slidesPerView: 3,
       spaceBetween: 20,
     },

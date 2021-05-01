@@ -41,21 +41,26 @@
     color: $mainblue;
   }
   .accordion__content {
-    padding: 14px 40px;
+    // padding: 14px 40px;
+    padding: 10px 33px;
+    width: 400px;
+    //border: 1px solid rgb(209, 209, 209);
     ul {
       li {
         list-style: circle;
-        padding-top: 10px;
+        padding: 10px 0;
         font-size: $default-font-size;
+        border-bottom: 1px solid rgb(209, 209, 209);
         a {
           text-decoration: none;
+          color: $mainblue;
         }
       }
     }
   }
 }
 
-@media all and (max-width: 870px) {
+@include respond(tab-land) {
   .list {
     flex-direction: column;
     align-items: center;
@@ -83,11 +88,14 @@
       transition: transform 0.4s;
     }
     .accordion__label:hover {
-      background-color: rgba(0, 0, 0, 0.322);
+      opacity: 0.88;
     }
 
     .accordion__content {
       display: none;
+      padding: 14px 40px;
+      width: auto;
+
       p {
         width: 100%;
         margin: 10px 0;

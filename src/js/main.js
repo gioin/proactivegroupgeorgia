@@ -73,7 +73,7 @@ var mySwiper = new Swiper(".swiper-container", {
   speed: 900,
   //display timer
   autoplay: {
-    delay: 3700,
+    delay: 3500,
     disableOnInteraction: true,
     //reverseDirection: true,
     waitForTransition: true,

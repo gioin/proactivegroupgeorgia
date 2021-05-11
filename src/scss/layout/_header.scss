@@ -41,7 +41,7 @@
       .nav-link {
         display: inline-block;
         list-style: none;
-        font-size: 1.5rem;
+        font-size: 1.6rem;
         a {
           &:link,
           &:visited {
@@ -55,7 +55,7 @@
             background-size: 220%;
             color: $color-grey-light-2;
             text-decoration: none;
-            text-transform: uppercase;
+            text-transform: capitalize;
             transition: all 0.4s;
           }
 

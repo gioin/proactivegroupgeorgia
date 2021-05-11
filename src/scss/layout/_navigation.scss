@@ -1,15 +1,19 @@
 .navigation {
+  display: none;
+  @include respond(tab-land) {
+    display: block;
+  }
   &__checkbox {
     display: none;
   }
 
-  label,
-  &__background {
-    display: none;
-    @include respond(tab-land) {
-      display: block;
-    }
-  }
+  // label,
+  // &__background {
+  //   display: none;
+  //   @include respond(tab-land) {
+  //     display: block;
+  //   }
+  // }
   &__button {
     background-color: $color-white;
     height: 7rem;
@@ -93,8 +97,9 @@
       transform: translateX(1rem);
     }
   }
-  &__link:first-child {
-  }
+  // &__link:first-child {
+  // }
+
   //FUNCTIONALITY
   &__checkbox:checked ~ &__background {
     transform: scale(80);

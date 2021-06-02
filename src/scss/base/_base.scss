@@ -57,7 +57,12 @@ body {
   width: 120px;
   height: 120px;
   -webkit-animation: spin 2s linear infinite; /* Safari */
-  animation: spin 2s linear infinite;
+  animation: spin 1.7s linear infinite;
+  @include respond(tab-land) {
+    border-top: 14px solid $mainblue;
+    width: 90px;
+    height: 90px;
+  }
 }
 
 /* Safari */

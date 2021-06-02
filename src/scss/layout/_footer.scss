@@ -37,7 +37,9 @@
   &__bottom {
     padding-top: 2.8rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
   &__adress {
     font-weight: normal;
@@ -66,5 +68,39 @@
     font-size: $default-font-size;
     line-height: 2rem;
     color: $color-grey-light-1;
+  }
+}
+
+/* --------- Footer SECTION --------- */
+@media all and (max-width: 904px) {
+  /* --------- Footer SECTION --------- */
+  .footer {
+    &__top {
+      flex-direction: column;
+      align-items: center;
+      .logo {
+        display: none;
+      }
+      li:first-child {
+        padding-left: 0;
+      }
+    }
+
+    &__socialmedia {
+      p {
+        display: none;
+      }
+      .social-media {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  .section__title {
+    font-size: 30px;
+    line-height: 1.9rem;
+  }
+
+  section {
+    margin-bottom: 100px;
   }
 }

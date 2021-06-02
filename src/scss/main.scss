@@ -62,43 +62,6 @@
   }
 }
 
-/* --------- Footer SECTION --------- */
-@media all and (max-width: 904px) {
-  /* --------- Footer SECTION --------- */
-  .footer {
-    &__top {
-      flex-direction: column;
-      align-items: center;
-      .logo {
-        display: none;
-      }
-      li:first-child {
-        padding-left: 0;
-      }
-    }
-    &__bottom {
-      flex-direction: column-reverse;
-      align-items: center;
-    }
-
-    &__socialmedia {
-      p {
-        display: none;
-      }
-      .social-media {
-        margin-bottom: 20px;
-      }
-    }
-  }
-  .section__title {
-    font-size: 30px;
-    line-height: 1.9rem;
-  }
-
-  section {
-    margin-bottom: 100px;
-  }
-}
 
 /* --------- Progress Section--------- */
 @media all and (max-width: 870px) {

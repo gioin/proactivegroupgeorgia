@@ -1,8 +1,10 @@
+/////////////////////////  Page Loader ///////////////////////////
 window.addEventListener("load", function () {
   const load = document.querySelector(".load");
   load.className += " hidden";
 });
 
+/////////////////////////  ViewPort Calculation ///////////////////////////
 // First we get the viewport height and multiply it by 1% to get a value for a vh unit
 let vh = window.innerHeight * 0.01;
 // Then we set the value in the --vh custom property to the root of the document
@@ -18,10 +20,11 @@ window.addEventListener("resize", () => {
 ///// Media Query
 const reveal = document.querySelectorAll(".reveal");
 const revealResp = document.querySelectorAll(".reveal-resp");
-
 const smallDevice = window.matchMedia("(max-width: 870px)");
 
 smallDevice.addListener(handleDeviceChange);
+
+/////////////////////////  SECTIONS Reveal ///////////////////////////
 
 function handleDeviceChange(e) {
   if (e.matches) {
@@ -45,9 +48,6 @@ function handleDeviceChange(e) {
       section.classList.add("section--hidden");
     });
   } else {
-    //////////////////////////////////////
-    /// sections Reveal
-
     const revealSection = function (entries, observer) {
       const [entry] = entries;
       console.log(entries);
@@ -73,12 +73,14 @@ function handleDeviceChange(e) {
 handleDeviceChange(smallDevice);
 /////////
 
+/////////////////////////  Swiper Js ///////////////////////////
+
 var mySwiper = new Swiper(".swiper-container", {
   //sweper speed
   speed: 900,
   //display timer
   autoplay: {
-    delay: 3500,
+    delay: 4000,
     disableOnInteraction: true,
     //reverseDirection: true,
     waitForTransition: true,
@@ -177,8 +179,8 @@ var swiper = new Swiper(".quote-container", {
   },
 });
 
-///////////////////////////////////////
-// Header Reveal
+/////////////////////////  Header Reveal ///////////////////////////
+
 const section1 = document.querySelector("#section1");
 const header = document.querySelector(".header");
 const headerLogo = document.querySelector(".header__logo");
@@ -214,8 +216,6 @@ observer.observe(section1);
 
 //////////////////////////////////////
 /// sections Reveal
-
-///////////////////
 const about = document.querySelector(".rmw");
 
 about.classList.remove("section--hidden");
